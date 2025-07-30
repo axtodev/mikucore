@@ -1,0 +1,81 @@
+name: MikuCore
+version: 1.0.0
+main: com.mikucore.MikuCore
+api-version: '1.20'
+author: axtodev
+commands:
+  playtime:
+    description: Check your or another player's playtime
+    usage: /<command> [player]
+    permission: mikucore.playtime
+    permission-message: &no_perm §cYou don't have permission to use this command.
+  report:
+    description: Report a player
+    usage: /<command> <player> <reason>
+    permission: mikucore.report
+    permission-message: *no_perm
+  msg:
+    description: Send a private message to a player
+    usage: /<command> <player> <message>
+    permission: mikucore.msg
+    permission-message: *no_perm
+  r:
+    description: Reply to your last message
+    usage: /<command> <message>
+    permission: mikucore.msg
+    permission-message: *no_perm
+  staffchat:
+    description: Toggle staff chat or send a message to staff
+    aliases: [sc]
+    permission: mikucore.staff
+    permission-message: *no_perm
+  announce:
+    description: Send a server-wide announcement
+    permission: mikucore.announce
+    permission-message: *no_perm
+
+permissions:
+  mikucore.*:
+    description: Gives access to all MikuCore commands
+    children:
+      mikucore.playtime: true
+      mikucore.report: true
+      mikucore.msg: true
+      mikucore.staff: true
+      mikucore.announce: true
+      mikucore.socialspy: true
+  
+  # Basic Permissions
+  mikucore.playtime:
+    description: Allows use of /playtime command
+    default: true
+  mikucore.report:
+    description: Allows use of /report command
+    default: true
+  mikucore.msg:
+    description: Allows use of private messaging
+    default: true
+  
+  # Staff Permissions
+  mikucore.staff:
+    description: Base staff permission
+    default: op
+    children:
+      mikucore.staff.chat: true
+      mikucore.staff.notify: true
+  
+  mikucore.staff.chat:
+    description: Access to staff chat
+    default: op
+  
+  mikucore.staff.notify:
+    description: Receive staff notifications
+    default: op
+  
+  mikucore.announce:
+    description: Send server announcements
+    default: op
+  
+  mikucore.socialspy:
+    description: Spy on private messages
+    default: op

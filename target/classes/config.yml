@@ -1,0 +1,94 @@
+# MikuCore Configuration
+
+# Chat Settings
+chat:
+  # General chat settings
+  formatting:
+    enabled: true
+    format: "&7[%player_displayname%&7] %message%"
+    
+  # Staff chat settings
+  staff-chat:
+    enabled: true
+    format: "&8[&cStaff&8] &7%sender%: &f%message%"
+    toggle-message-enabled: "&aStaff chat enabled. Your messages will now be sent to staff only."
+    toggle-message-disabled: "&7Staff chat disabled. Your messages will now go to public chat."
+
+# Chat Filter Settings
+chat-filter:
+  enabled: true
+  mute-on-violation: true
+  notify-staff: true
+  
+  # List of words to censor (case insensitive)
+  censored-words:
+    - "porco dio"
+    - "dio cane"
+    - "madonna"
+    - "vaffanculo"
+    - "cazzo"
+    - "merda"
+    - "stronzo"
+    - "puttana"
+    - "troia"
+    - "fuck"
+    - "shit"
+    - "bitch"
+    - "asshole"
+    - "cunt"
+    - "dick"
+
+  # Replacement for censored words
+  replacement: "***"
+
+# Playtime Settings (in minutes)
+playtime:
+  required-for-staff: 10080  # 1 week
+  
+# Report Settings
+report:
+  cooldown: 300  # 5 minutes in seconds
+  max-reports: 5  # Max reports per cooldown period
+  
+# Private Message Settings
+messages:
+  # Private message formatting
+  message-format: "&7[&e%from% &7-> &e%to%&7] &f%message%"
+  socialspy-format: "&7[&cSPY&7] [&e%from% &7-> &e%to%&7] &f%message%"
+  
+  # Report messages
+  report-format: "&8[&cReport&8] &7%reporter% reported %reported%: &f%reason%"
+  report-cooldown: "&cYou must wait %seconds% seconds before reporting again."
+  report-sent: "&aYour report has been sent to online staff members."
+  
+  # Staff notifications
+  staff-notification: "&8[&cStaff&8] &7%player%: &f%message%"
+
+# Announcement Settings
+announcements:
+  # Announcement format
+  format:
+    top: "&8&m----------------------------------------------------"
+    message: "&8[&6Announcement&8] &e%message%"
+    bottom: "&8&m----------------------------------------------------"
+  
+  # Sound played with announcements
+  sound:
+    enabled: true
+    sound: "ENTITY_ENDER_DRAGON_GROWL"
+    volume: 1.0
+    pitch: 1.0
+
+# Colors
+colors:
+  primary: "&e"
+  secondary: "&7"
+  error: "&c"
+  success: "&a"
+  info: "&b"
+  
+# Debug Settings
+debug:
+  enabled: false
+  log-filtered-words: true
+  log-staff-actions: true
