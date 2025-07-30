@@ -1,9 +1,0 @@
-com\mikucore\commands\PlaytimeCommand.class
-com\mikucore\commands\StaffChatCommand.class
-com\mikucore\commands\AnnounceCommand.class
-com\mikucore\commands\ReplyCommand.class
-com\mikucore\listeners\ChatListener$FilterResult.class
-com\mikucore\commands\MessageCommand.class
-com\mikucore\listeners\ChatListener.class
-com\mikucore\MikuCore.class
-com\mikucore\commands\ReportCommand.class
